@@ -7,7 +7,6 @@ const snakeBody = [
 let newSegments = 0;
 export function update(){
     addSegments();
-    console.log('update snake');
     const inputDirection = getInputDirection();
     for(let i = snakeBody.length - 2; i >= 0; i--){
         snakeBody[i + 1] = { ...snakeBody[i] }
@@ -18,7 +17,6 @@ export function update(){
 }
 
 export function draw(gameBoard){
-    console.log('draw snake');
     snakeBody.forEach(segment =>{
         const snakeElement = document.createElement('div');
         snakeElement.style.gridRowStart = segment.y;
